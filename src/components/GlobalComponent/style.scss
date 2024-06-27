@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    //dat bien
+    --background_color_slidebar: hsla(0,0%,100%,0.05);
+    --background_color_main: #170f23;
+}
+
+h1, h2, h3, h4, a, p, span, i {
+    color: rgb(218, 218, 218);
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+li {
+    list-style: none;
+}
+
+button, input {
+    border: none;
+    outline: none;
+}
+
+a[href] {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#main {
+    background-color: var(--background_color_main);
+}
+
+//left_sliderbar
+#left_slidebar {
+//dat bien
+    --link-text-hover: #c273ed;
+    --text-item-hover: #fff;
+
+    background-color: var(--background_color_slidebar);
+    height: 100vh;
+    width: 240px;
+    .wrapper {
+        
+    }
+
+    .top_menu {
+        margin-bottom: 16px;
+    }
+
+    .logo {
+        padding: 0px 28px 0px 25px;
+        img {
+            width: 120px;
+            height: 40px;
+            margin: 15px 0px;
+        }
+    }
+
+    .item_menu {
+        align-items: center;
+        i:first-child, svg:first-child{
+            margin-right: 12px;
+            font-size: 18px;
+        }
+
+        i:last-child, svg:last-child {
+            right: 0;
+            font-size: 18px;
+            display: none;
+        }
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 21px 12px 24px;
+            line-height: 20px;
+        }
+
+        .sub {
+            display: flex;
+            align-items: center;
+        }
+
+    }
+    .active{
+        background-color: rgba(254,255,255,0.1);
+        border-left: 3px solid #b06ad6;
+        h3 {
+            color: var(--text-item-hover);
+        }
+
+        a {
+            padding-left: 21px;
+        }
+    }
+    
+    a:hover h3{
+        color: var(--text-item-hover);
+    }
+
+    a:hover i:last-child{
+        display: block;
+    }
+
+    .sidebar-divide {
+        height: 0.5px;
+        margin: 0 auto;
+        width: 80%;
+        background-color: rgba(254,255,255,0.1);
+    }
+
+    .second_menu {
+        .main_menu {
+            margin-top: 16px;
+        }
+    }
+
+}

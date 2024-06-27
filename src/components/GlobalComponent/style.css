@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --background_color_slidebar: hsla(0,0%,100%,0.05);
+  --background_color_main: #170f23;
+}
+
+h1, h2, h3, h4, a, p, span, i {
+  color: #dadada;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+li {
+  list-style: none;
+}
+
+button, input {
+  border: none;
+  outline: none;
+}
+
+a[href] {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#main {
+  background-color: var(--background_color_main);
+}
+
+#left_slidebar {
+  --link-text-hover: #c273ed;
+  --text-item-hover: #fff;
+  background-color: var(--background_color_slidebar);
+  height: 100vh;
+  width: 240px;
+}
+#left_slidebar .top_menu {
+  margin-bottom: 16px;
+}
+#left_slidebar .logo {
+  padding: 0px 28px 0px 25px;
+}
+#left_slidebar .logo img {
+  width: 120px;
+  height: 40px;
+  margin: 15px 0px;
+}
+#left_slidebar .item_menu {
+  align-items: center;
+}
+#left_slidebar .item_menu i:first-child, #left_slidebar .item_menu svg:first-child {
+  margin-right: 12px;
+  font-size: 18px;
+}
+#left_slidebar .item_menu i:last-child, #left_slidebar .item_menu svg:last-child {
+  right: 0;
+  font-size: 18px;
+  display: none;
+}
+#left_slidebar .item_menu a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 21px 12px 24px;
+  line-height: 20px;
+}
+#left_slidebar .item_menu .sub {
+  display: flex;
+  align-items: center;
+}
+#left_slidebar .active {
+  background-color: rgba(254, 255, 255, 0.1);
+  border-left: 3px solid #b06ad6;
+}
+#left_slidebar .active h3 {
+  color: var(--text-item-hover);
+}
+#left_slidebar .active a {
+  padding-left: 21px;
+}
+#left_slidebar a:hover h3 {
+  color: var(--text-item-hover);
+}
+#left_slidebar a:hover i:last-child {
+  display: block;
+}
+#left_slidebar .sidebar-divide {
+  height: 0.5px;
+  margin: 0 auto;
+  width: 80%;
+  background-color: rgba(254, 255, 255, 0.1);
+}
+#left_slidebar .second_menu .main_menu {
+  margin-top: 16px;
+}
+
+/*# sourceMappingURL=style.css.map */
