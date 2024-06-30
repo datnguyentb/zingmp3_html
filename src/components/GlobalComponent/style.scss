@@ -4,18 +4,63 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: Inter;
+    src: url(../../../assets/fonts/inter/inter_Inter-Italic.woff) format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../../../assets/fonts/inter/inter_Inter-MediumItalic.woff) format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../../../assets/fonts/inter/inter_Inter-SemiBold.woff) format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../../../assets/fonts/inter/inter_Inter-SemiBoldItalic.woff);
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Zingmp3_font;
+    src: url(../../../assets/fonts/inter/mp3-zing.2a3edced.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
 
     //dat bien
+    --white: #fff;
     --background_color_slidebar: hsla(0,0%,100%,0.05);
     --background_color_main: #170f23;
+    --black: #000;
 }
 
 h1, h2, h3, h4, a, p, span, i {
     color: rgb(218, 218, 218);
     font-weight: 400;
     letter-spacing: normal;
+}
+
+.hidden {
+    display: none !important;
 }
 
 li {
@@ -58,7 +103,7 @@ a[href] {
         img {
             width: 120px;
             height: 40px;
-            margin: 15px 0px;
+            margin: 13px 3px;
         }
     }
 
@@ -80,6 +125,12 @@ a[href] {
             align-items: center;
             padding: 12px 21px 12px 24px;
             line-height: 20px;
+            cursor: pointer;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 400;
         }
 
         .sub {
@@ -93,11 +144,30 @@ a[href] {
         border-left: 3px solid #b06ad6;
         h3 {
             color: var(--text-item-hover);
+            font-weight: 500;
+        }
+        svg {
+            color: var(--text-item-hover);
+            font-weight: 500;
         }
 
         a {
             padding-left: 21px;
         }
+    }
+
+    .live {
+        background-color: red;
+        font-size: 10px;
+        padding: 5px 5px;
+        transform: scaleY(0.8);
+        font-weight: 500;
+        color: #fff;
+        margin-top: -5px;
+        margin-left: 8px;
+        line-height: normal;
+        border-radius: 5px;
+        text-transform: uppercase;
     }
     
     a:hover h3{
@@ -116,9 +186,86 @@ a[href] {
     }
 
     .second_menu {
+        overflow: hidden auto;
+        max-height: 520px;
         .main_menu {
             margin-top: 16px;
         }
+
+        .ads {
+            // width: 200px;
+            background-color: #9b4de0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 15px 8px;
+            border-radius: 8px;
+            margin: 15px 20px;
+
+            p {
+                margin-bottom: 10px;
+                text-align: center;
+                color: var(--white);
+                font-size: 12px;
+                line-height: 1.67;
+                font-weight: 600;
+            }
+
+            a {
+                color: var(--white);
+                border-radius: 15px;
+                margin: 0 auto;
+                padding: 6px 35px;
+                font-size: 12px;
+                font-weight: 600;
+                border: 1px solid var(--white);
+                background-color: hsla(0,0%,100%,0.1);;
+                text-transform: uppercase;
+                cursor: pointer;
+                line-height: 15px;
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+
+        .upgrade {
+            background-image: linear-gradient(117deg, #5a4be7, #c86dd7 102%);
+            a {
+                background-color: #ffdb00;
+                border-color: #ffdb00;
+                color: var(--black);
+                padding: 6px 16px;
+            }
+        }
+
+        .personal_menu_playlist {
+            ul {
+                li {
+                    margin-left: 3px;
+                }
+
+                a {
+                    padding: 12px 21px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                svg {
+                    margin-right: 12px;
+                }
+
+                span {
+
+                }
+            }
+        }
+    }
+
+    .second_menu::-webkit-scrollbar {
+        width: 0px; /* Độ rộng của thanh cuộn */
     }
 
 }
