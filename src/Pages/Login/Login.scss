@@ -117,12 +117,16 @@
     .login {
         cursor: not-allowed;
         margin-top: 20px;
+        .box {
+        background-color: var(--button-color);
+        }
         h4 {
             line-height: 44px;
             text-align: center;
             width: 100%;
-            color: #333;
+            color: var(--white);
             font-weight: 600;
+            user-select: none;
         }
     }
 

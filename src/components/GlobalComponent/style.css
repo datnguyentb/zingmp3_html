@@ -40,6 +40,7 @@ body {
   --primary-color: #f05123;
   --background_color_slidebar: hsla(0,0%,100%,0.05);
   --slidebar_left_width: 240px;
+  --button-color: #1dbfaf;
   --background_color_main: #170f23;
   --border-player: hsla(0,0%,100%,0.1);
   --player-bg: #130c1c;
