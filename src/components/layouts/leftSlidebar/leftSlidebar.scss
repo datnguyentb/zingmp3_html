@@ -1,0 +1,188 @@
+#left_slidebar {
+    //dat bien
+        --link-text-hover: #c273ed;
+        --text-item-hover: #fff;
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: var(--slidebar_left_width);
+        background-color: var(--background_color_slidebar);
+        .wrapper {
+        }
+    
+        .top_menu {
+            margin-bottom: 16px;
+        }
+    
+        .logo {
+            padding: 0px 28px 0px 25px;
+            img {
+                width: 120px;
+                height: 40px;
+                margin: 13px 3px;
+            }
+        }
+    
+        .item_menu {
+            align-items: center;
+            i:first-child, svg:first-child{
+                margin-right: 12px;
+                font-size: 18px;
+            }
+    
+            i:last-child, svg:last-child {
+                right: 0;
+                font-size: 18px;
+                display: none;
+            }
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 12px 21px 12px 24px;
+                line-height: 20px;
+                cursor: pointer;
+            }
+    
+            h3 {
+                font-size: 14px;
+                font-weight: 400;
+            }
+    
+            .sub {
+                display: flex;
+                align-items: center;
+            }
+    
+        }
+        .active{
+            background-color: rgba(254,255,255,0.1);
+            border-left: 3px solid #b06ad6;
+            h3 {
+                color: var(--text-item-hover);
+                font-weight: 500;
+            }
+            svg {
+                color: var(--text-item-hover);
+                font-weight: 500;
+            }
+    
+            a {
+                padding-left: 21px;
+            }
+        }
+    
+        .live {
+            background-color: red;
+            font-size: 10px;
+            padding: 5px 5px;
+            transform: scaleY(0.8);
+            font-weight: 500;
+            color: #fff;
+            margin-top: -5px;
+            margin-left: 8px;
+            line-height: normal;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+        
+        a:hover h3{
+            color: var(--text-item-hover);
+        }
+    
+        a:hover i:last-child{
+            display: block;
+        }
+    
+        .sidebar-divide {
+            height: 0.5px;
+            margin: 0 auto;
+            width: 80%;
+            background-color: rgba(254,255,255,0.1);
+        }
+    
+        .second_menu {
+            overflow: hidden auto;
+            max-height: 520px;
+            .main_menu {
+                margin-top: 16px;
+            }
+    
+            .ads {
+                // width: 200px;
+                background-color: #9b4de0;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 15px 8px;
+                border-radius: 8px;
+                margin: 15px 20px;
+    
+                p {
+                    margin-bottom: 10px;
+                    text-align: center;
+                    color: var(--white);
+                    font-size: 12px;
+                    line-height: 1.67;
+                    font-weight: 600;
+                }
+    
+                a {
+                    color: var(--white);
+                    border-radius: 15px;
+                    margin: 0 auto;
+                    padding: 6px 35px;
+                    font-size: 12px;
+                    font-weight: 600;
+                    border: 1px solid var(--white);
+                    background-color: hsla(0,0%,100%,0.1);;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    line-height: 15px;
+                    &:hover {
+                        opacity: 0.9;
+                    }
+                }
+            }
+    
+            .upgrade {
+                background-image: linear-gradient(117deg, #5a4be7, #c86dd7 102%);
+                a {
+                    background-color: #ffdb00;
+                    border-color: #ffdb00;
+                    color: var(--black);
+                    padding: 6px 16px;
+                }
+            }
+    
+            .personal_menu_playlist {
+                ul {
+                    li {
+                        margin-left: 3px;
+                    }
+    
+                    a {
+                        padding: 12px 21px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                    }
+    
+                    svg {
+                        margin-right: 12px;
+                    }
+    
+                    span {
+    
+                    }
+                }
+            }
+        }
+    
+        .second_menu::-webkit-scrollbar {
+            width: 0px; /* Độ rộng của thanh cuộn */
+        }
+    
+    }

@@ -6,6 +6,8 @@
     <title>Zing MP3 - Nghe nhạc mới, HOT nhất và tải nhạc miễn phí</title>
     <link rel="icon" href="./assets/img/icon.jpg">
     <link rel="stylesheet" href="./src/components/GlobalComponent/style.css">
+    <link rel="stylesheet" href="./src/components/layouts/leftSlidebar/leftSlidebar.css">
+    <link rel="stylesheet" href="./src/Pages/Login/Login.css">
     <link rel="stylesheet" href="./assets/fonts/fontAwesome/fontAwesome/all.css">
 </head>
 <body>
@@ -74,7 +76,7 @@
                     </div>
                 </div>
                 <div class="player_control_center">
-                    <img src="./database/storage/singer_avatar/son_tung_mtp.jpg" alt="">
+                    <img src="./src/database/storage/singer_avatar/son_tung_mtp.jpg" alt="">
                 </div>
                 <div class="player_control_right">
 
@@ -82,7 +84,52 @@
                 
             </div>
         </div>
+        <div id="login">
+            <div class="wrapper">
+                <div class="header">
+                    <img src="./assets/img/logo-dark.svg" alt="zingmp3">
+                    <h2>Đăng nhập vào Zingmp3</h2>
+                    <p>Mỗi người nên sử dụng riêng một tài khoản, tài khoản nhiều người sử dụng chung sẽ bị khóa.</p>
+                </div>
+                <div class="login_container">
+                    <div class="box_input">
+                        <div class="username box">
+                            <input type="text" placeholder="Email hoặc Username">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="password box">
+                            <input type="password" placeholder="Mật khẩu">
+                            <i class="show_eye_icon fa-solid fa-eye-slash"></i>
+                            <i class="hidden_eye_icon hidden fa-solid fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="sub">
+                        <div class="remember">
+                            <input type="checkbox">
+                            <span>Ghi nhớ đăng nhập</span>
+                        </div>
+                        <div class="forgot">
+                            <a>Quên mật khẩu?</a>
+                        </div>
+                    </div>
+                    
+                    <div class="login">
+                        <div class="box">
+                            <h4>Đăng nhập</h4>
+                        </div>
+                    </div>
+                    <div class="sign_up">
+                        <p>Bạn chưa có tài khoản? <a href="">Đăng ký</a></p>
+                    </div>
+                </div>
+                
+                <div class="footer">
+                    <p>Việc bạn tiếp tục sử dụng trang web này đồng nghĩa bạn đồng ý với <a href="">điều khoản sử dụng</a> của chúng tôi.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script type="module" src="./src/components/layouts/leftSlidebar/index.js"></script>
+<script type="module" src="./src/Pages/Login/Login.js"></script>
 </html>
