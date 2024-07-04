@@ -1,4 +1,3 @@
-//chuyển đổi giao diện 
 function redirectBasedOnSize() {
     if (window.innerWidth <= 768) {
         localStorage.setItem('deviceType', 'mobile');

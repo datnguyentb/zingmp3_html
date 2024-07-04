@@ -1,0 +1,28 @@
+.default_btn {
+  --purple-primary: #9b4de0;
+  line-height: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 100px;
+}
+.default_btn i {
+  padding: 4px;
+}
+
+.primary_btn {
+  background-color: var(--purple-primary);
+  color: var(--white);
+}
+.primary_btn i {
+  color: var(--white);
+}
+
+.second_btn {
+  color: var(--link-text-hover);
+  background-color: var(--alpha-bg);
+}
+.second_btn i {
+  color: var(--link-text-hover);
+}
+
+/*# sourceMappingURL=Button.css.map */

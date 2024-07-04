@@ -39,6 +39,7 @@ body {
   --white: #fff;
   --primary-color: #f05123;
   --background_color_slidebar: hsla(0,0%,100%,0.05);
+  --layout-header-bg: rgba(23,15,35,0.8);
   --slidebar_left_width: 240px;
   --button-color: #1dbfaf;
   --background_color_main: #170f23;
@@ -87,45 +88,6 @@ a[href] {
 #main {
   background-color: var(--background_color_main);
   height: 1000px;
-}
-
-#header {
-  margin-left: var(--slidebar_left_width);
-  position: fixed;
-  top: 0;
-  padding: 0 59px;
-  height: 70px;
-}
-#header .wrapper {
-  display: flex;
-  height: 100%;
-  flex-direction: row;
-  align-items: center;
-}
-#header .direct button {
-  background-color: transparent;
-  margin-right: 20px;
-}
-#header .direct button i {
-  font-size: 24px;
-  font-weight: 300;
-}
-#header .search {
-  background-color: var(--alpha-bg);
-  border-radius: 20px;
-  max-width: 440px;
-  width: 440px;
-  display: flex;
-  align-items: center;
-}
-#header .search i {
-  margin: 0 13px;
-}
-#header .search input {
-  background-color: transparent;
-  height: 40px;
-  width: 95%;
-  color: var(--white);
 }
 
 #control_player_container {

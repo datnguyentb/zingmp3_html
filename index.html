@@ -7,6 +7,8 @@
     <link rel="icon" href="./assets/img/icon.jpg">
     <link rel="stylesheet" href="./src/components/GlobalComponent/style.css">
     <link rel="stylesheet" href="./src/components/layouts/leftSlidebar/leftSlidebar.css">
+    <link rel="stylesheet" href="./src/components/layouts/header/Header.css">
+    <link rel="stylesheet" href="./src/components/component/Button/Button.css">
     <link rel="stylesheet" href="./src/Pages/Login/Login.css">
     <link rel="stylesheet" href="./assets/fonts/fontAwesome/fontAwesome/all.css">
 </head>
@@ -37,16 +39,29 @@
                 </div>
             </div>
         </div>
-
+            <img src="./mobile/index.html" alt="">
         <div id="header">
             <div class="wrapper">
-                <div class="direct">
-                    <button><i class="fa-solid fa-arrow-left-long"></i></button>
-                    <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                <div class="left_box">
+                    <div class="direct">
+                        <button><i class="fa-solid fa-arrow-left-long"></i></button>
+                        <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                    </div>
+                    <div class="search">
+                        <i class="fa-regular fa-magnifying-glass"></i>
+                        <input class="search_input" type="text" placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát...">
+                        <i class="hidden delete_input fa-solid fa-xmark"></i>
+                    </div>
                 </div>
-                <div class="search">
-                    <i class="fa-regular fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát...">
+                <div class="right_box">
+                    <button class="default_btn primary_btn">Nâng cấp tài khoản</button>
+                    <button class="default_btn second_btn"><i class="fa-solid fa-display-arrow-down"></i>Tải bản Windowns</button>
+                    <div class="setting">
+                        <i class="fa-regular fa-gear"></i>
+                    </div>
+                    <div class="user_avatar">
+                        <img src="./src/database/Singers/avatar/son_tung_mtp.jpg" alt="user_Avatar">
+                    </div>
                 </div>
             </div>
         </div>
@@ -131,5 +146,7 @@
     </div>
 </body>
 <script type="module" src="./src/components/layouts/leftSlidebar/index.js"></script>
+<script type="module" src="./src/components/layouts/header/Header.js"></script>
+<script type="module" src="./src/components/GlobalComponent/index.js"></script>
 <script type="module" src="./src/Pages/Login/Login.js"></script>
 </html>

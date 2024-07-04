@@ -1,0 +1,86 @@
+#header {
+  position: fixed;
+  top: 0;
+  background-color: var(--layout-header-bg);
+  margin-left: var(--slidebar_left_width);
+  padding: 0 59px;
+  width: calc(100% - var(--slidebar_left_width));
+  height: 70px;
+}
+#header .wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .left_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#header .direct button {
+  background-color: transparent;
+  margin-right: 20px;
+}
+#header .direct button i {
+  font-size: 22px;
+  font-weight: 300;
+  color: #646464;
+}
+#header .search {
+  background-color: var(--alpha-bg);
+  border-radius: 20px;
+  max-width: 440px;
+  width: 440px;
+  display: flex;
+  align-items: center;
+}
+#header .search i {
+  margin: 0 13px;
+}
+#header .search input {
+  background-color: transparent;
+  height: 40px;
+  width: 95%;
+  color: var(--white);
+}
+#header .search .delete_input {
+  margin-right: 18px;
+  cursor: pointer;
+}
+#header .right_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#header .right_box .setting {
+  cursor: pointer;
+}
+#header .right_box .user_avatar {
+  width: 38px;
+  height: 38px;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#header .right_box .user_avatar img {
+  width: 100%;
+  height: auto;
+}
+#header .right_box .setting {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--alpha-bg);
+}
+#header button + button {
+  margin: 12px;
+}
+
+/*# sourceMappingURL=Header.css.map */
