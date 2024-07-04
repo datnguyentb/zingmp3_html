@@ -1,11 +1,17 @@
+#box_placeholder_header {
+  margin-top: 5px;
+  height: var(--header_height);
+  background-color: transparent;
+  display: block;
+}
+
 #header {
   position: fixed;
   top: 0;
   background-color: var(--layout-header-bg);
-  margin-left: var(--slidebar_left_width);
   padding: 0 59px;
   width: calc(100% - var(--slidebar_left_width));
-  height: 70px;
+  height: var(--header_height);
 }
 #header .wrapper {
   display: flex;
@@ -17,8 +23,14 @@
 }
 #header .left_box {
   display: flex;
+  flex: 1;
   flex-direction: row;
   align-items: center;
+  margin-right: 10px;
+}
+#header .direct {
+  display: flex;
+  flex-direction: row;
 }
 #header .direct button {
   background-color: transparent;
@@ -33,18 +45,19 @@
   background-color: var(--alpha-bg);
   border-radius: 20px;
   max-width: 440px;
-  width: 440px;
+  width: 100%;
   display: flex;
   align-items: center;
 }
 #header .search i {
-  margin: 0 13px;
+  margin: 0 20px;
 }
 #header .search input {
   background-color: transparent;
   height: 40px;
   width: 95%;
   color: var(--white);
+  padding-right: 15px;
 }
 #header .search .delete_input {
   margin-right: 18px;

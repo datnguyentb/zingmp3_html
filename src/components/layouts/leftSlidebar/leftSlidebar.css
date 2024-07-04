@@ -1,8 +1,15 @@
 @charset "UTF-8";
+#box_placeholder_left_slidebar {
+  width: var(--slidebar_left_width);
+  height: 100%;
+  background-color: transparent;
+}
+
 #left_slidebar {
   --link-text-hover: #c273ed;
   --text-item-hover: #fff;
   position: fixed;
+  height: 100%;
   top: 0;
   left: 0;
   width: var(--slidebar_left_width);
@@ -90,6 +97,7 @@
 #left_slidebar .second_menu {
   overflow: hidden auto;
   max-height: 520px;
+  height: 100%;
 }
 #left_slidebar .second_menu .main_menu {
   margin-top: 16px;

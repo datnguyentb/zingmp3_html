@@ -1,9 +1,17 @@
+#box_placeholder_left_slidebar {
+    width: var(--slidebar_left_width);
+    height: 100%;
+    background-color: transparent;
+}
+
 #left_slidebar {
     //dat bien
         --link-text-hover: #c273ed;
         --text-item-hover: #fff;
     
         position: fixed;
+        height: 100%;
+        // max-height: calc(100vh - 90px);
         top: 0;
         left: 0;
         width: var(--slidebar_left_width);
@@ -105,6 +113,7 @@
         .second_menu {
             overflow: hidden auto;
             max-height: 520px;
+            height: 100%;
             .main_menu {
                 margin-top: 16px;
             }

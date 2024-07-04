@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./src/components/GlobalComponent/style.css">
     <link rel="stylesheet" href="./src/components/layouts/leftSlidebar/leftSlidebar.css">
     <link rel="stylesheet" href="./src/components/layouts/header/Header.css">
+    <link rel="stylesheet" href="./src/components/layouts/playerControl/playerControl.css">
+    <link rel="stylesheet" href="./src/components/layouts/content/content.css">
     <link rel="stylesheet" href="./src/components/component/Button/Button.css">
     <link rel="stylesheet" href="./src/Pages/Login/Login.css">
     <link rel="stylesheet" href="./assets/fonts/fontAwesome/fontAwesome/all.css">
@@ -39,114 +41,140 @@
                 </div>
             </div>
         </div>
-            <img src="./mobile/index.html" alt="">
-        <div id="header">
-            <div class="wrapper">
-                <div class="left_box">
-                    <div class="direct">
-                        <button><i class="fa-solid fa-arrow-left-long"></i></button>
-                        <button><i class="fa-solid fa-arrow-right-long"></i></button>
+        <div id="box_placeholder_left_slidebar">
+
+        </div>
+        <div id="main_content_container">
+            <div id="header">
+                <div class="wrapper">
+                    <div class="left_box">
+                        <div class="direct">
+                            <button><i class="fa-solid fa-arrow-left-long"></i></button>
+                            <button><i class="fa-solid fa-arrow-right-long"></i></button>
+                        </div>
+                        <div class="search">
+                            <i class="fa-regular fa-magnifying-glass"></i>
+                            <input class="search_input" type="text" placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát...">
+                            <i class="hidden delete_input fa-solid fa-xmark"></i>
+                        </div>
                     </div>
-                    <div class="search">
-                        <i class="fa-regular fa-magnifying-glass"></i>
-                        <input class="search_input" type="text" placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát...">
-                        <i class="hidden delete_input fa-solid fa-xmark"></i>
-                    </div>
-                </div>
-                <div class="right_box">
-                    <button class="default_btn primary_btn">Nâng cấp tài khoản</button>
-                    <button class="default_btn second_btn"><i class="fa-solid fa-display-arrow-down"></i>Tải bản Windowns</button>
-                    <div class="setting">
-                        <i class="fa-regular fa-gear"></i>
-                    </div>
-                    <div class="user_avatar">
-                        <img src="./src/database/Singers/avatar/son_tung_mtp.jpg" alt="user_Avatar">
+                    <div class="right_box">
+                        <button class="default_btn primary_btn">Nâng cấp tài khoản</button>
+                        <button class="default_btn second_btn"><i class="fa-solid fa-display-arrow-down"></i>Tải bản Windowns</button>
+                        <div class="setting">
+                            <i class="fa-regular fa-gear"></i>
+                        </div>
+                        <div class="user_avatar">
+                            <img src="./src/database/Singers/avatar/son_tung_mtp.jpg" alt="user_Avatar">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div id="content">
-
-        </div>
-
-        <div id="rigt_sliderbar">
-
-        </div>
-
-        <div id="control_player_container">
-            <div class="wrapper">
-                <div class="player_control_left">
-                    <div class="media">
-                        <div class="media_left">
-                            <img src="./assets/img/channels4_profile.jpg" alt="">
-                        </div>
-                        <div class="media_infor">
-                            <span class="title">Bạn của tôi</span>
-                            <a href="">Trương thảo nhi</a>
-                        </div>
-                        <div class="media_right">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="player_control_center">
-                    <img src="./src/database/storage/singer_avatar/son_tung_mtp.jpg" alt="">
-                </div>
-                <div class="player_control_right">
-
-                </div>
+            <div id="box_placeholder_header">
                 
             </div>
-        </div>
-        <div id="login">
-            <div class="wrapper">
-                <div class="header">
-                    <img src="./assets/img/logo-dark.svg" alt="zingmp3">
-                    <h2>Đăng nhập vào Zingmp3</h2>
-                    <p>Mỗi người nên sử dụng riêng một tài khoản, tài khoản nhiều người sử dụng chung sẽ bị khóa.</p>
-                </div>
-                <div class="login_container">
-                    <div class="box_input">
-                        <div class="username box">
-                            <input type="text" placeholder="Email hoặc Username">
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                        <div class="password box">
-                            <input type="password" placeholder="Mật khẩu">
-                            <i class="show_eye_icon fa-solid fa-eye-slash"></i>
-                            <i class="hidden_eye_icon hidden fa-solid fa-eye"></i>
+    
+            <div id="content">
+                <h1>Hello world</h1>
+            </div>
+    
+            <div id="rigt_sliderbar">
+    
+            </div>
+    
+            <div id="control_player_container">
+                <div class="wrapper">
+                    <div class="player_control_left">
+                        <div class="media">
+                            <div class="media_left">
+                                <img src="./assets/img/channels4_profile.jpg" alt="">
+                            </div>
+                            <div class="media_infor">
+                                <span class="title">Bạn của tôi</span>
+                                <a href="">Trương thảo nhi</a>
+                            </div>
+                            <div class="media_right">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="sub">
-                        <div class="remember">
-                            <input type="checkbox">
-                            <span>Ghi nhớ đăng nhập</span>
+                    <div class="player_control_center">
+                        <div class="box_btn_control">
+                            <button><i class="fa-regular fa-shuffle"></i></button>
+                            <button><i class="fa-solid fa-backward-step"></i></button>
+                            <button class="play-btn"><i class="play fa-sharp fa-regular fa-circle-play"></i></button>
+                            <button class="hidden pauce-btn"><i class="pauce fa-regular fa-circle-pause"></i></button>
+                            <button><i class="fa-solid fa-forward-step"></i></button>
+                            <button><i class="fa-solid fa-repeat"></i></button>
                         </div>
-                        <div class="forgot">
-                            <a>Quên mật khẩu?</a>
+                        <div class="timmer">
+                            <span class="start">0:00</span>
+                            <div class="line"></div>
+                            <span class="end">3:30</span>
+                        </div>
+                    </div>
+                    <div class="player_control_right">
+                        <button><i class="fa-solid fa-compact-disc"></i></button>
+                        <button><i class="fa-regular fa-microphone-stand"></i></button>
+                        <button><i class="fa-regular fa-window-restore"></i></button>
+                        <button><i class="fa-regular fa-volume"></i></button>
+                        <button class="hidden"><i class="fa-regular fa-volume-slash"></i></button>
+                        <span class="volume"></span>
+                        <span class="line"></span>
+                        <button><i class="fa-regular fa-list-music"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="login">
+                <div class="wrapper">
+                    <div class="header">
+                        <img src="./assets/img/logo-dark.svg" alt="zingmp3">
+                        <h2>Đăng nhập vào Zingmp3</h2>
+                        <p>Mỗi người nên sử dụng riêng một tài khoản, tài khoản nhiều người sử dụng chung sẽ bị khóa.</p>
+                    </div>
+                    <div class="login_container">
+                        <div class="box_input">
+                            <div class="username box">
+                                <input type="text" placeholder="Email hoặc Username">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="password box">
+                                <input type="password" placeholder="Mật khẩu">
+                                <i class="show_eye_icon fa-solid fa-eye-slash"></i>
+                                <i class="hidden_eye_icon hidden fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="sub">
+                            <div class="remember">
+                                <input type="checkbox">
+                                <span>Ghi nhớ đăng nhập</span>
+                            </div>
+                            <div class="forgot">
+                                <a>Quên mật khẩu?</a>
+                            </div>
+                        </div>
+                        
+                        <div class="login">
+                            <div class="box">
+                                <h4>Đăng nhập</h4>
+                            </div>
+                        </div>
+                        <div class="sign_up">
+                            <p>Bạn chưa có tài khoản? <a href="">Đăng ký</a></p>
                         </div>
                     </div>
                     
-                    <div class="login">
-                        <div class="box">
-                            <h4>Đăng nhập</h4>
-                        </div>
+                    <div class="footer">
+                        <p>Việc bạn tiếp tục sử dụng trang web này đồng nghĩa bạn đồng ý với <a href="">điều khoản sử dụng</a> của chúng tôi.</p>
                     </div>
-                    <div class="sign_up">
-                        <p>Bạn chưa có tài khoản? <a href="">Đăng ký</a></p>
-                    </div>
-                </div>
-                
-                <div class="footer">
-                    <p>Việc bạn tiếp tục sử dụng trang web này đồng nghĩa bạn đồng ý với <a href="">điều khoản sử dụng</a> của chúng tôi.</p>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script type="module" src="./src/components/GlobalComponent/index.js"></script>
 <script type="module" src="./src/components/layouts/leftSlidebar/index.js"></script>
 <script type="module" src="./src/components/layouts/header/Header.js"></script>
-<script type="module" src="./src/components/GlobalComponent/index.js"></script>
 <script type="module" src="./src/Pages/Login/Login.js"></script>
 </html>
