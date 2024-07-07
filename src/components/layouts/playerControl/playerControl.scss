@@ -1,10 +1,11 @@
 #control_player_container {
+
     position: fixed;
     width: 100%;
     bottom: 0;
     left: 0;
     z-index: 10;
-    height: 90px;
+    height: var(--control_player_height);
     padding: 0 20px;
     border-top: 1px solid var(--border-player);
     background-color: #ffdb00;

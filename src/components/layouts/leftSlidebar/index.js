@@ -116,7 +116,7 @@ LIST_MENU.forEach((item, index) => {
                     ${item.icon}
                     <h3>${item.title}</h3>
                 </div>
-                ${item.more_icon?'<i class="fa-regular fa-circle-play"></i>':""}
+                ${item.more_icon?'<i class="fa-regular fa-circle-play more-icon"></i>':""}
             </a>
         </li>`
     }
@@ -156,7 +156,7 @@ if(!current_user) {
 }
 ads.innerHTML = ads_html;
 
-//test icon
+//your playlist
 if(current_user) {
     var personalMenu = document.querySelector('.personal_menu_playlist ul.navbar_menu');
     var library_personal = document.querySelector('.personal_menu_playlist ul.library_personal')
@@ -173,7 +173,7 @@ if(current_user) {
     })
 
     current_user.playlist.forEach((playlist, index) => {
-        html_library_personal += `<li><a><span>${playlist.title}</span></a></li>`
+        html_library_personal += `<li><a href="#main"><span>${playlist.title}</span></a>${playlist.icon}</li>`
     })
     personalMenu.innerHTML = html_menu_playlist;
     library_personal.innerHTML = html_library_personal;

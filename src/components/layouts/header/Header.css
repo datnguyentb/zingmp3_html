@@ -1,13 +1,20 @@
 #box_placeholder_header {
+  display: flex;
+  flex-direction: row;
   margin-top: 5px;
   height: var(--header_height);
+  width: 100%;
   background-color: transparent;
-  display: block;
 }
 
 #header {
+  --sticky-header-box-shadow: rgba(0,0,0,0.1);
   position: fixed;
+  z-index: 11;
   top: 0;
+  right: 0;
+  box-shadow: 0 3px 5px var(--sticky-header-box-shadow);
+  backdrop-filter: blur(50px);
   background-color: var(--layout-header-bg);
   padding: 0 59px;
   width: calc(100% - var(--slidebar_left_width));

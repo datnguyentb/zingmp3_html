@@ -37,6 +37,7 @@
 body {
   font-family: 'Inter', sans-serif;
   --white: #fff;
+  --border-primary: hsla(0,0%,100%,0.1);
   --primary-color: #f05123;
   --background_color_slidebar: hsla(0,0%,100%,0.05);
   --layout-header-bg: rgba(23,15,35,0.8);
@@ -50,6 +51,7 @@ body {
   --black: #000;
   --text-secondary: hsla(0,0%,100%,0.5);
   --alpha-bg: hsla(0,0%,100%,0.1);
+  --control_player_height: 90px;
 }
 
 h1, h2, h3, h4, a, p, span, i {
@@ -88,9 +90,10 @@ a[href] {
 
 #main {
   background-color: var(--background_color_main);
-  height: 1000px;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
+  padding-bottom: 100px;
 }
 
 #main_content_container {

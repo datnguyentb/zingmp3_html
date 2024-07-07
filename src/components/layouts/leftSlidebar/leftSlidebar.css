@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #box_placeholder_left_slidebar {
-  width: var(--slidebar_left_width);
+  width: 240px;
   height: 100%;
   background-color: transparent;
 }
@@ -9,7 +9,9 @@
   --link-text-hover: #c273ed;
   --text-item-hover: #fff;
   position: fixed;
-  height: 100%;
+  height: calc(100% - var(--control_player_height));
+  display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
   width: var(--slidebar_left_width);
@@ -90,14 +92,12 @@
 }
 #left_slidebar .sidebar-divide {
   height: 0.5px;
-  margin: 0 auto;
-  width: 80%;
+  margin: 0 21px 0 24px;
   background-color: rgba(254, 255, 255, 0.1);
 }
 #left_slidebar .second_menu {
   overflow: hidden auto;
-  max-height: 520px;
-  height: 100%;
+  flex: 1;
 }
 #left_slidebar .second_menu .main_menu {
   margin-top: 16px;
@@ -147,19 +147,78 @@
 }
 #left_slidebar .second_menu .personal_menu_playlist ul li {
   margin-left: 3px;
+  padding: 0 21px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 #left_slidebar .second_menu .personal_menu_playlist ul a {
-  padding: 12px 21px;
+  padding: 12px 0;
+  flex: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+#left_slidebar .second_menu .personal_menu_playlist ul li:hover i {
+  display: block;
+}
+#left_slidebar .second_menu .personal_menu_playlist ul i {
+  cursor: pointer;
+  display: none;
+}
 #left_slidebar .second_menu .personal_menu_playlist ul svg {
   margin-right: 12px;
+}
+#left_slidebar .second_menu ul.navbar_menu {
+  margin-bottom: 16px;
+}
+#left_slidebar .second_menu ul.library_personal {
+  margin-top: 16px;
 }
 #left_slidebar .second_menu::-webkit-scrollbar {
   width: 0px;
   /* Độ rộng của thanh cuộn */
+}
+#left_slidebar .add_new_playlist {
+  padding: 0 24px;
+  border-top: 1px solid var(--border-primary);
+}
+#left_slidebar .add_new_playlist .add_new_playlist_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 54px;
+  cursor: pointer;
+}
+#left_slidebar .add_new_playlist i {
+  font-size: 16px;
+  margin-right: 12px;
+  padding: 4px 5px;
+}
+#left_slidebar .add_new_playlist span {
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 1134px) {
+  #box_placeholder_left_slidebar {
+    width: 70px;
+  }
+
+  #left_slidebar {
+    width: 70px !important;
+  }
+  #left_slidebar .live, #left_slidebar .upgrade, #left_slidebar h3, #left_slidebar span, #left_slidebar .wrapper {
+    display: none !important;
+  }
+  #left_slidebar a:hover i:last-child {
+    display: none;
+  }
+
+  #header {
+    width: calc(100% - 70px) !important;
+    padding: 0 23px !important;
+  }
 }
 
 /*# sourceMappingURL=leftSlidebar.css.map */
