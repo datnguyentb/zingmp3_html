@@ -1,3 +1,20 @@
+//Custom Scrollbar
+
+::-webkit-scrollbar {
+width: 4px;
+transition: opacity 200ms ease 0s;
+margin-right: 2px;
+}
+
+::-webkit-scrollbar-track {
+background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+background: #888; 
+border-radius: 8px;
+}
+  
 * {
     box-sizing: border-box;
     margin: 0;
@@ -51,6 +68,7 @@ body {
     --border-primary: hsla(0,0%,100%,0.1);
     --primary-color: #f05123;
     --background_color_slidebar: hsla(0,0%,100%,0.05);
+    --sidebar-popup-bg: #2a213a;
     --layout-header-bg: rgba(23,15,35,0.8);
     --slidebar_left_width: 240px;
     --header_height: 70px;
@@ -85,6 +103,10 @@ h1, h2, h3, h4, a, p, span, i {
 
 .hidden {
     display: none !important;
+}
+
+.show {
+    display: block !important;
 }
 
 li {

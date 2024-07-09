@@ -92,12 +92,20 @@ LIST_MENU.forEach((item, index) => {
         top_menu_left_slidebar_HTML += 
         `<li class="item_menu ${item.active?'active':''}">
             <a>
-                <div class="sub">
+                <div>
                     ${item.icon}
-                    <h3>${item.title}</h3>
-                    ${item.status?`<div class=${item.status}>${item.status}</div>`:""}
                 </div>
-                ${item.more_icon?'<i class="fa-regular fa-circle-play"></i>':""}
+                <div class="sub">
+                    <div class="sub_wrapper">
+                        <div>
+                        <h3>${item.title}</h3>
+                        ${item.status?`<div class="status_icon">${item.status}</div>`:""}
+                        </div>
+                        <div>
+                        ${item.more_icon?'<i class="fa-regular fa-circle-play"></i>':""}
+                        </div>
+                    </div>
+                </div>
             </a>
         </li>`
     }
@@ -112,11 +120,20 @@ LIST_MENU.forEach((item, index) => {
         main_menu_left_slidebar_HTML += 
         `<li class="item_menu">
             <a>
-                <div class="sub">
+                <div>
                     ${item.icon}
-                    <h3>${item.title}</h3>
                 </div>
-                ${item.more_icon?'<i class="fa-regular fa-circle-play more-icon"></i>':""}
+                <div class="sub">
+                    <div class='sub_wrapper'>
+                        <div>
+                        <h3>${item.title}</h3>
+                        ${item.status?`<div class="status_icon">${item.status}</div>`:""}
+                        </div>
+                        <div>
+                            ${item.more_icon?'<i class="fa-regular fa-circle-play"></i>':""}
+                        </div>
+                    </div>
+                </div>
             </a>
         </li>`
     }
@@ -166,16 +183,110 @@ if(current_user) {
         html_menu_playlist += 
         `<li>
             <a href=${playlist.href}>
-                ${playlist.icon}
-                <span>${playlist.title}</span>
+                <div>${playlist.icon}</div>
+                <div class="sub">
+                    <div sub_wrapper>
+                        <div>
+                            <span>${playlist.title}</span>
+                        </div>
+                    </div>
+                </div>
             </a>
         </li>`
     })
 
     current_user.playlist.forEach((playlist, index) => {
-        html_library_personal += `<li><a href="#main"><span>${playlist.title}</span></a>${playlist.icon}</li>`
+        html_library_personal += 
+        `<li class='sub'>
+            <a href="#main">
+                <div class="sub_wrapper">
+                    <div>
+                        <span>${playlist.title}</span>
+                    </div>
+                    <div>${playlist.icon}</div>
+                </div>
+            </a>
+        </li>`
     })
     personalMenu.innerHTML = html_menu_playlist;
     library_personal.innerHTML = html_library_personal;
 
 }
+
+//add direct 
+const direct_show_left_slidebar = document.querySelector('#left_slidebar .direct-show');
+const direct_close_left_slidebar = document.querySelector('#left_slidebar .direct-close');
+const sub_elements_left_slidebar = document.querySelectorAll('#left_slidebar .sub')
+const left_slidebar_element = document.getElementById('left_slidebar');
+const add_new_playlist_box = document.querySelector('#left_slidebar .add_new_playlist');
+const add_playlist_icon = document.querySelector('#left_slidebar i.add-playlist');
+const left_slidebar_logo = document.querySelector('#left_slidebar .logo img');
+const left_slidebar_logo_box = document.querySelector('#left_slidebar .logo');
+
+
+direct_show_left_slidebar.addEventListener('click', () => {
+    left_slidebar_element.style.width = '240px'
+    direct_show_left_slidebar.classList.add('hidden')
+    direct_show_left_slidebar.classList.remove('show')
+    direct_close_left_slidebar.classList.remove('hidden')
+    direct_close_left_slidebar.classList.add('show')
+    add_new_playlist_box.style.padding = "0 24px" ;
+    add_playlist_icon.classList.add('show');
+    left_slidebar_logo.src='./assets/img/logo-dark.svg';
+
+    sub_elements_left_slidebar.forEach(element => {
+        element.classList.add('show');
+    })
+})
+
+direct_close_left_slidebar.addEventListener('click', () => {
+    left_slidebar_element.style.width = '70px'
+    direct_show_left_slidebar.classList.remove('hidden')
+    direct_close_left_slidebar.classList.add('hidden')
+    direct_close_left_slidebar.classList.remove('show')
+    add_new_playlist_box.classList.remove('show');
+    add_new_playlist_box.style.padding = "0 15px" ;
+    add_playlist_icon.classList.remove('show');
+    left_slidebar_logo_box.style.padding = '0px 28px 0px 25px';
+    left_slidebar_logo.src='./assets/img/logo_2.svg';
+    
+    sub_elements_left_slidebar.forEach(element => {
+        element.classList.remove('show');
+    })
+})
+
+//reponsive
+function checkWidth() {
+    if (window.innerWidth <= 1134) {
+        left_slidebar_element.style.width = '70px';
+        direct_show_left_slidebar.classList.add('show');
+        direct_close_left_slidebar.classList.remove('show');
+        add_new_playlist_box.style.padding = "0" ;
+        add_playlist_icon.classList.remove('show');
+        left_slidebar_logo.src='./assets/img/logo_2.svg';
+        left_slidebar_logo_box.style.padding = '0px';
+        left_slidebar_logo_box.style.padding = '0 15px';
+
+        sub_elements_left_slidebar.forEach(element => {
+            element.classList.add('hidden');
+            element.classList.remove('show');
+        })
+    } else {
+        left_slidebar_element.style.width = '240px';
+        direct_show_left_slidebar.classList.remove('show');
+        direct_close_left_slidebar.classList.remove('show');
+        add_new_playlist_box.style.padding = "0 24px";
+        left_slidebar_logo.src='./assets/img/logo-dark.svg';
+        left_slidebar_logo_box.style.padding = '0px 28px 0px 25px';
+
+        sub_elements_left_slidebar.forEach(element => {
+            element.classList.add('show');
+            element.classList.remove('hidden');
+        })
+
+    }
+}
+
+window.addEventListener("load", checkWidth);
+
+window.addEventListener("resize", checkWidth);
