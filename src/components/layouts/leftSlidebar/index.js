@@ -247,7 +247,7 @@ direct_close_left_slidebar.addEventListener('click', () => {
     add_new_playlist_box.classList.remove('show');
     add_new_playlist_box.style.padding = "0 15px" ;
     add_playlist_icon.classList.remove('show');
-    left_slidebar_logo_box.style.padding = '0px 28px 0px 25px';
+    left_slidebar_logo_box.style.padding = '0 15px';
     left_slidebar_logo.src='./assets/img/logo_2.svg';
     
     sub_elements_left_slidebar.forEach(element => {
